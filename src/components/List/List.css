@@ -1,0 +1,34 @@
+.List {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 10px solid red;
+  border-radius: 20px;
+  background-color: blue;
+  
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-inline-start: 0px;
+
+    list-style-type: none;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    width: 20%;
+    text-align: center;
+    border: 10px solid rgb(177, 177, 60);
+    border-radius: 20px;
+    background-color: yellow;
+
+    img {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}

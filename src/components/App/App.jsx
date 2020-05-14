@@ -7,6 +7,7 @@ import {
 import Header from '../Header/Header';
 import List from '../List/List';
 import Detail from '../Detail/Detail';
+import './App.css';
 
 export default function App() {
   return (

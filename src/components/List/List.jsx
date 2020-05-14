@@ -1,16 +1,11 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getRandomCharacters } from '../../selectors/characterSelector';
-import { setRandom } from '../../actions/characterActions';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { getCharacters } from '../../selectors/characterSelector';
 import { Link } from 'react-router-dom';
+import styles from './List.css';
 
 const List = () => {
-  const dispatch = useDispatch();
-  const characters = useSelector(getRandomCharacters);
-
-  useEffect(() => {
-    dispatch(setRandom());
-  }, []);
+  const characters = useSelector(getCharacters);
 
   const characterNodes = characters.map((char) => 
     (<li key={char._id}>
@@ -21,11 +16,11 @@ const List = () => {
     ));
 
   return (
-    <>
+    <section className={styles.List}>
       <ul>
         {characterNodes}
       </ul>   
-    </>
+    </section>
   );
 };
 

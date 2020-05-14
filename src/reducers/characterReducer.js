@@ -1,4 +1,4 @@
-import { SET_RANDOM, SET_DETAIL } from '../actions/characterActions';
+import { SET_RANDOM, SET_DETAIL, SET_SERIES } from '../actions/characterActions';
 
 const initialState = {
   characters: [],
@@ -12,6 +12,9 @@ export default function reducer(state = initialState, action) {
       return state;
     case SET_DETAIL:
       state.character = action.payload;
+      return state;
+    case SET_SERIES:
+      state.characters = action.payload;
       return state;
     default:
       return state;

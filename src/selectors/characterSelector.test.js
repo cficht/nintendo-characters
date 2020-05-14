@@ -1,4 +1,4 @@
-import { getRandomCharacters, getCharacter } from './characterSelector';
+import { getCharacters, getCharacter } from './characterSelector';
 
 describe('characterSelector testing', () => {
   it('gets characters', () => {
@@ -24,7 +24,7 @@ describe('characterSelector testing', () => {
         }
       ]
     };
-    const characters = getRandomCharacters(state);
+    const characters = getCharacters(state);
 
     expect(characters).toEqual([
       {

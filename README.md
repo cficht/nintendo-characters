@@ -7,35 +7,34 @@ Full stack app using React and Redux for the front end.
 ## components
 - [X] - App
 - [X] - List
-- [] - Detail
+- [X] - Detail
 - [X] - Header
 
 ## services
-- [] - nintendo
+- [X] - nintendo
   * [X] - fetchRandom
-  * [] - fetchSeries
-  * [] - fetchById
+  * [X] - fetchSeries
+  * [X] - fetchById
 
 ## actions
-- [] - characterActions
+- [X] - characterActions
   * [X] - setRandom action
-  * [] - setSeries action
-  * [] - setDetail action
-  * [] - study action
-- [] - characterActions.test
+  * [X] - setSeries action
+  * [X] - setDetail action
+- [X] - characterActions.test
 
 ## reducers
-- [] - characterReducer
+- [X] - characterReducer
   * [X] - handle SET_RANDOM
-  * [] - handle SET_SERIES
-  * [] - handle SET_DETAIL
-- [] - characterReducer.test
+  * [X] - handle SET_SERIES
+  * [X] - handle SET_DETAIL
+- [X] - characterReducer.test
 
 ## selectors
-- [] - characterSelectors
+- [X] - characterSelectors
   * [X] - getCharacters
   * [X] - getCharacterById
-- [] - characterSelectors.test
+- [X] - characterSelectors.test
 
 # --------------------
 
@@ -46,12 +45,12 @@ detail
 list
 fetchRandom
 fetchDetail
-
 fetchSeries
 header with links to series
 placeholder for missing image and data
+style?
 
 setFavorites? (save to LocalStorage, Favorites component, favoritesActions, favoritesReducer, favoritesSelector)
-style?
+
 
 

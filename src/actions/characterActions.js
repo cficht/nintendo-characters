@@ -1,4 +1,4 @@
-import { fetchRandom, fetchDetail } from '../services/nintendo';
+import { fetchRandom, fetchDetail, fetchSeries } from '../services/nintendo';
 
 export const SET_RANDOM = 'SET_RANDOM';
 export const setRandom = () => dispatch => {
@@ -18,6 +18,17 @@ export const setDetail = (id) => dispatch => {
       dispatch({
         type: SET_DETAIL,
         payload: character
+      });
+    });
+};
+
+export const SET_SERIES = 'SET_SERIES';
+export const setSeries = (series) => dispatch => {
+  return fetchSeries(series)
+    .then(characters => {
+      dispatch({
+        type: SET_SERIES,
+        payload: characters
       });
     });
 };
