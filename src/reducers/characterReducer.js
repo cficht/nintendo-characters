@@ -7,7 +7,8 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case SET_RANDOM:
-      return action.payload;
+      state.characters = action.payload;
+      return state;
     default:
       return state;
   }
