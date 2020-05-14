@@ -1,16 +1,17 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCharacter } from '../../selectors/characterSelector';
+import { setDetail } from '../../actions/characterActions';
+import { useParams } from 'react-router-dom';
 
 const Detail = () => {
-  const character = {
-    _id: '5ebc8efe301bdab1fad1b3f7',
-    name: 'Kass',
-    first_appearance: 'The Legend of Zelda: Breath of the Wild',
-    quote: null,
-    species: 'Rito',
-    creator: null,
-    image: 'https://vignette.wikia.nocookie.net/nintendo/images/d/d4/BotW_Kass.png/revision/latest/scale-to-width-down/310?cb=20170701213846&path-prefix=en'
-  };
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const character = useSelector(getCharacter);
+
+  useEffect(() => {
+    dispatch(setDetail(id));
+  }, []);
 
   return (
     <>
@@ -18,11 +19,9 @@ const Detail = () => {
       <img src={character.image} />
       <p>Species: {character.species}</p>
       <p>Creator: {character.creator}</p>
-      <p>Quote: {character.quote}</p>
+      <p>Quote: &quot;{character.quote}&quot;</p>
     </>
   );
 };
-
-// Detail.propTypes = {};
 
 export default Detail;

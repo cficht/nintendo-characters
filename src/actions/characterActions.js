@@ -12,8 +12,8 @@ export const setRandom = () => dispatch => {
 };
 
 export const SET_DETAIL = 'SET_DETAIL';
-export const setDetail = () => dispatch => {
-  return fetchDetail()
+export const setDetail = (id) => dispatch => {
+  return fetchDetail(id)
     .then(character => {
       dispatch({
         type: SET_DETAIL,

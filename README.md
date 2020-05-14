@@ -45,11 +45,10 @@ react router
 detail
 list
 fetchRandom
-
 fetchDetail
-header with links to series
-fetchSeries
 
+fetchSeries
+header with links to series
 placeholder for missing image and data
 
 setFavorites? (save to LocalStorage, Favorites component, favoritesActions, favoritesReducer, favoritesSelector)
