@@ -1,4 +1,4 @@
-import { getRandomCharacters } from './characterSelector';
+import { getRandomCharacters, getCharacter } from './characterSelector';
 
 describe('characterSelector testing', () => {
   it('gets characters', () => {
@@ -24,7 +24,6 @@ describe('characterSelector testing', () => {
         }
       ]
     };
-
     const characters = getRandomCharacters(state);
 
     expect(characters).toEqual([
@@ -49,4 +48,31 @@ describe('characterSelector testing', () => {
     ]);
   });
 
+  it('gets characters', () => {
+    const state = {
+      character: 
+        {
+          _id: '5ebc8efe301bdab1fad1b419',
+          name: 'Medli',
+          first_appearance: 'The Legend of Zelda: The Wind Waker',
+          quote: null,
+          species: 'Rito',
+          creator: 'Nintendo',
+          image: 'https://vignette.wikia.nocookie.net/nintendo/images/d/d5/Medli.png/revision/latest/scale-to-width-down/310?cb=20150510025028&path-prefix=en'
+        }
+    };
+    const characters = getCharacter(state);
+
+    expect(characters).toEqual(
+      {
+        _id: '5ebc8efe301bdab1fad1b419',
+        name: 'Medli',
+        first_appearance: 'The Legend of Zelda: The Wind Waker',
+        quote: null,
+        species: 'Rito',
+        creator: 'Nintendo',
+        image: 'https://vignette.wikia.nocookie.net/nintendo/images/d/d5/Medli.png/revision/latest/scale-to-width-down/310?cb=20150510025028&path-prefix=en'
+      }
+    );
+  });
 });

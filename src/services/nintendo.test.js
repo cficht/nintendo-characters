@@ -1,4 +1,4 @@
-import { fetchRandom } from './nintendo';
+import { fetchRandom, fetchDetail } from './nintendo';
 
 
 describe('nintendo api', () => {
@@ -50,6 +50,38 @@ describe('nintendo api', () => {
             image: 'https://vignette.wikia.nocookie.net/nintendo/images/d/d5/Medli.png/revision/latest/scale-to-width-down/310?cb=20150510025028&path-prefix=en'
           }
         ]);
+      });
+  });
+
+  it('can fetch a single characters by id', () => {
+    // eslint-disable-next-line no-undef
+    global.fetch = () => Promise.resolve({
+      json: () => Promise.resolve(
+        {
+          _id: 'as22d35sad234s',
+          name: 'Kass',
+          first_appearance: 'The Legend of Zelda: Breath of the Wild',
+          quote: null,
+          species: 'Rito',
+          creator: null,
+          image: 'https://vignette.wikia.nocookie.net/nintendo/images/d/d4/BotW_Kass.png/revision/latest/scale-to-width-down/310?cb=20170701213846&path-prefix=en'
+        }
+      )
+    });
+
+    return fetchDetail('as22d35sad234s')
+      .then(characters => {
+        expect(characters).toEqual(
+          {
+            _id: 'as22d35sad234s',
+            name: 'Kass',
+            first_appearance: 'The Legend of Zelda: Breath of the Wild',
+            quote: null,
+            species: 'Rito',
+            creator: null,
+            image: 'https://vignette.wikia.nocookie.net/nintendo/images/d/d4/BotW_Kass.png/revision/latest/scale-to-width-down/310?cb=20170701213846&path-prefix=en'
+          }
+        );
       });
   });
 });

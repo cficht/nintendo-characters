@@ -48,9 +48,11 @@ fetchRandom
 
 fetchDetail
 header with links to series
-actions
-reducer
-selectors
+fetchSeries
+
+placeholder for missing image and data
+
+setFavorites? (save to LocalStorage, Favorites component, favoritesActions, favoritesReducer, favoritesSelector)
 style?
 
-setFavorites? (save to LocalStorage, Favorites component)
+
