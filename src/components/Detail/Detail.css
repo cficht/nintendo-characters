@@ -1,0 +1,10 @@
+.Detail {
+  padding: 20px;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  border: 10px solid red;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+}

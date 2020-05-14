@@ -1,0 +1,23 @@
+.Header {
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 10px solid red;
+  border-radius: 20px;
+  background-color: blue;
+
+  h1 {
+    font-size: 40px;
+    color: white;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+
+    a {
+      color: white;
+    }
+  }
+}
