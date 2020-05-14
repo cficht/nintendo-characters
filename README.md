@@ -5,20 +5,20 @@ Full stack app using React and Redux for the front end.
 # --------------------
 
 ## components
-- [] - App
-- [] - List
+- [X] - App
+- [X] - List
 - [] - Detail
-- [] - Header
+- [X] - Header
 
 ## services
 - [] - nintendo
-  * [] - fetchRandom
+  * [X] - fetchRandom
   * [] - fetchSeries
   * [] - fetchById
 
 ## actions
 - [] - characterActions
-  * [] - setRandom action
+  * [X] - setRandom action
   * [] - setSeries action
   * [] - setDetail action
   * [] - study action
@@ -26,14 +26,15 @@ Full stack app using React and Redux for the front end.
 
 ## reducers
 - [] - characterReducer
-  * [] - handle SET_RANDOM
+  * [X] - handle SET_RANDOM
   * [] - handle SET_SERIES
   * [] - handle SET_DETAIL
 - [] - characterReducer.test
 
 ## selectors
 - [] - characterSelectors
-  * [] - getCharacters
+  * [X] - getCharacters
+  * [X] - getCharacterById
 - [] - characterSelectors.test
 
 # --------------------
@@ -43,8 +44,8 @@ redux setup
 react router
 detail
 list
-
 fetchRandom
+
 fetchDetail
 header with links to series
 actions
