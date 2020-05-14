@@ -39,11 +39,17 @@ Full stack app using React and Redux for the front end.
 # --------------------
 
 ## Steps
-
 redux setup
-presentational components
+react router
+detail
+list
+
+fetchRandom
+fetchDetail
+header with links to series
 actions
 reducer
 selectors
 style?
-setFavorites?
+
+setFavorites? (save to LocalStorage, Favorites component)
